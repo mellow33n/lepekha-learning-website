@@ -314,18 +314,22 @@ header {
 }
 .sheet-lesson {
     display: grid;
-    grid-template-columns: 50px 1fr auto;
+    grid-template-columns: 1fr auto;
     border: 2px solid white;
     border-radius: 15px;
     padding: 10px;
 
-    &-number, &-subject, &-homework {
+    &-subject, &-homework {
         display: grid;
         grid-gap: 10px;
         grid-auto-rows: 40px;
 
         
     }
+    &-subject {
+        border-right: 2px solid orangered;
+    }
+    
 
     &-text {
         color: white;
@@ -333,6 +337,12 @@ header {
         font-size: 1rem;
         letter-spacing: 1px;
         border-bottom: 2px solid $orange;
+        padding-left: 5px;
+
+        
+        &:hover {
+            border-bottom: 2px solid white;
+        }
         &:last-child {
             border-bottom: 2px solid transparent;
         }
@@ -344,6 +354,7 @@ header {
         text-decoration: none;
         letter-spacing: 1px;
         font-weight: bold;
+        padding-left: 5px;
 
     }
 
