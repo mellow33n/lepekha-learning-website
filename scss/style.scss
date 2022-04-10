@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../font/Ubuntu-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../font/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+$orange: #ff7500;
+
+
+body {
+    font-family: 'Ubuntu';
+    color: white;
+    background: rgb(22,130,91);
+    background: radial-gradient(circle, rgba(22,130,91,1) 21%, rgba(15,96,66,1) 50%, rgba(9,57,39,1) 87%);
+    
+
+
+}
+header, main {
+    margin: 30px 10%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    
+    
+
+    .nav-a {
+        color: white;
+        text-decoration: none;
+        
+        
+        
+
+        
+    }
+
+    .heading {
+        letter-spacing: 1px;
+        font-size: 3rem;
+
+        &-tittle {
+            text-align: center;
+
+            &-logotype {
+                color: $orange;
+                border-bottom: 5px solid white;
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    .nav {
+        display: flex;
+        margin: 1rem 0 0;
+        letter-spacing: 1px;
+        font-size: 1.6rem;
+
+        &-item {
+            border-bottom: 5px solid transparent;
+            padding: 0 15px;
+
+            &:hover:not(.heading-tittle) {
+                border-bottom: 5px solid $orange;
+                box-shadow: 3px -75px 70px -100px rgba(86, 23, 0, 0.6) inset;
+            }
+    
+            &:active:not(.heading-tittle) {
+                color: $orange;
+                border-bottom: 2px solid white;
+            }
+
+
+            &-text {
+                padding-bottom: 15px;
+                &::first-letter {
+                    color: $orange;
+                    letter-spacing: 1.5px;
+            }
+        }
+
+        
+        }
+    }
+}
+
+.main {
+    
+   
+
+    &-sect {
+        display: flex;
+        justify-content: start;
+        margin: 100px 0;
+
+        &-column-right {
+            max-width: 49%;
+            padding: 20px;
+            border: 5px solid white;
+            border-radius: 10px;
+
+            display: flex;
+            gap: 0 20px;  
+        }
+        &-column-left {
+            max-width: 49%;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px 0;
+            min-width: 30%;
+
+            
+
+            &-text {
+                font-size: 2rem;
+                text-align: center;
+                padding-bottom: 10px;
+                letter-spacing: 1px;
+                
+                &:hover {
+                    color: $orange;
+                }
+            }
+
+            &-link {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-img {
+        max-width: 99%;
+        height: auto;
+
+        
+    }
+}
+
+.section-tittle {
+    font-size: 2rem;
+    color: $orange;
+    border-bottom: 5px solid white;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+.section-text {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    line-height: 1.23;
+}
+
+.sect-2 {
+    flex-direction: row-reverse;
+
+    .section-tittle {
+        padding-left: 5px;
+    }
+    
+}
+.text-link {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-bottom: 2px solid $orange;
+
+    &:hover {
+        border-bottom: 2px solid white;
+    }
+    &:active {
+        color: $orange;
+        
+        
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: rgb(7,45,31);
+    background: linear-gradient(0deg, rgba(7,45,31,1) 0%, rgba(15,96,66,0) 100%);
+    &-row-up {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 30px 0 0;
+
+        &-item {
+            color: dimgray;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                border-bottom: 2px solid dimgray;
+            }
+            &:active {
+                color: white;
+                border-bottom: 2px solid $orange;
+            }
+
+            &-text {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    &-row-down {
+        text-align: center;
+        color: dimgray;
+        padding: 15px 0;
+    }
+}
