@@ -11,7 +11,29 @@
     <title>lesson 04</title>
 </head>
 
-<body class="second-page">
+<script> 
+    function displayOpa() { 
+    var pass = prompt("Кодовое слово"); 
+    if(pass == 'qq123') {
+        alert('Ладно, заходи');
+        document.getElementById("password-page").removeAttribute("style");
+    } else if (pass == 'pidoras' || pass == 'пидорас' || pass == 'лох' || pass == 'loh' || pass == 'lox' || pass == 'pidor' || pass == 'пидор') {
+        alert('Кодовое слово, пожалуйста. Ваше имя мне не интересно');
+        location.reload();
+    }
+    
+    else {
+        alert('Уходи, НЕЛЬОХА!');
+        location.reload();
+    }
+    } 
+    window.onload = displayOpa; 
+</script>
+
+<body class="second-page" id="password-page" style="filter: blur(100px);">
+   
+
+
    <header>
        <div class="heading">
             <a href="../../index.html" class="heading-tittle nav-a">
