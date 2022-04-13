@@ -72,6 +72,7 @@ header {
             &:hover:not(.heading-tittle) {
                 border-bottom: 5px solid $orange;
                 box-shadow: 3px -75px 70px -100px rgba(86, 23, 0, 0.6) inset;
+                transition: all .5s ease;
             }
 
             &:active:not(.heading-tittle) {
@@ -131,6 +132,7 @@ header {
 
                 &:hover {
                     color: $orange;
+                    transition: all .5s ease;
                 }
             }
 
@@ -161,6 +163,10 @@ header {
     padding: 15px 20px;
     font-size: 1.1rem;
     line-height: 1.23;
+
+    &-img {
+        max-width: 99%;
+    }
 }
 
 .sect-2 {
@@ -181,6 +187,7 @@ header {
 
     &:hover {
         border-bottom: 2px solid white;
+        transition: all .5s ease;
     }
 
     &:active {
@@ -208,6 +215,7 @@ header {
 
             &:hover {
                 border-bottom: 2px solid dimgray;
+                transition: all .5s ease;
             }
 
             &:active {
@@ -244,6 +252,7 @@ header {
             .heading-tittle-logotype {
                 color: $orange;
                 border-bottom: 5px solid white;
+                transition: all .5s ease;
             }
         }
 
@@ -344,10 +353,12 @@ header {
         .to-homework {
             color: white;
             background-color: $orange;
+            transition: all .7s ease;
 
             &-icon {
                 color: $orange;
                 background-color: white;
+                transition: all .7s ease;
             }
         }
 
@@ -402,6 +413,7 @@ header {
 
         &:hover {
             border-bottom: 2px solid white;
+            transition: all .5s ease;
         }
 
         &:last-child {
@@ -419,5 +431,11 @@ header {
         padding-left: 5px;
 
     }
+
+}
+.homework-score {
+    
+    font-weight: bold;
+    text-align: center;
 
 }
