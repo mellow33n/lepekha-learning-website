@@ -30,11 +30,20 @@ body {
 header,
 main {
     margin: 30px 10%;
+
+    @media (max-width: 400px) {
+        margin: 30px 5px;
+    }
 }
 
 header {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1250px) {
+        flex-direction: column;
+
+    }
 
 
 
@@ -47,6 +56,14 @@ header {
     .heading {
         letter-spacing: 1px;
         font-size: 3rem;
+
+        @media (max-width: 600px) {
+            letter-spacing: 0;
+            font-size: 2rem;
+            align-self: baseline;
+        }
+
+        
 
         &-tittle {
             text-align: center;
@@ -64,6 +81,16 @@ header {
         margin: 1rem 0 0;
         letter-spacing: 1px;
         font-size: 1.6rem;
+
+        @media (max-width: 1250px) {
+            justify-content: space-around;
+            margin: 5vh 0 0;
+            
+        }
+        @media (max-width: 600px) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
 
         &-item {
             border-bottom: 5px solid transparent;
@@ -101,6 +128,11 @@ header {
         justify-content: start;
         margin: 100px 0;
 
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+        
+
         &-column-right {
             max-width: 49%;
             padding: 20px;
@@ -109,10 +141,18 @@ header {
 
             display: flex;
             gap: 0 20px;
+
+            @media (max-width: 1200px) {
+                max-width: 99%;;
+            }
         }
 
         &-column-left {
             max-width: 49%;
+
+            @media (max-width: 1200px) {
+                max-width: 99%;;
+            }
         }
 
         &-item {
@@ -129,6 +169,10 @@ header {
                 text-align: center;
                 padding-bottom: 10px;
                 letter-spacing: 1px;
+
+                @media (max-width: 600px) {
+                    font-size: 1.1rem;
+                }
 
                 &:hover {
                     color: $orange;
@@ -171,9 +215,19 @@ header {
 
 .sect-2 {
     flex-direction: row-reverse;
+    @media (max-width: 1200px) {
+        flex-direction: column;
+    }
 
     .section-tittle {
         padding-left: 5px;
+    }
+
+    .main-sect-column-left, .main-sect-column-right {
+
+        @media (max-width: 1200px) {
+            max-width: 99%;;
+        }
     }
 
 }
@@ -392,13 +446,23 @@ header {
     &-homework {
         display: grid;
         grid-gap: 10px;
-        grid-auto-rows: 40px;
+        grid-auto-rows: minmax(40px, auto);
 
 
     }
 
     &-subject {
         border-right: 2px solid orangered;
+
+        @media (max-width: 900px) {
+            border-right: 0;
+        }
+    }
+    &-homework {
+
+        @media (max-width: 900px) {
+            display: none;
+        }
     }
 
 
@@ -409,6 +473,11 @@ header {
         letter-spacing: 1px;
         border-bottom: 2px solid $orange;
         padding-left: 5px;
+
+        @media (max-width: 900px) {
+            line-height: 30px;
+        }
+        
 
 
         &:hover {
